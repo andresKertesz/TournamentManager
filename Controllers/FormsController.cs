@@ -19,5 +19,14 @@ namespace TournamentManager.Controllers
             return team;
 
         }
+
+        public static Color ContrastColor(Color iColor)
+        {
+            // Calculate the perceptive luminance (aka luma) - human eye favors green color... 
+            double luma = ((0.299 * iColor.R) + (0.587 * iColor.G) + (0.114 * iColor.B)) / 255;
+
+            // Return black for bright colors, white for dark colors
+            return luma > 0.5 ? Color.Black : Color.White;
+        }
     }
 }

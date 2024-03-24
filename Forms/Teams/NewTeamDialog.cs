@@ -16,5 +16,10 @@ namespace TournamentManager.Forms.Teams
         {
             InitializeComponent();
         }
+
+        private void NewTeamDialog_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
